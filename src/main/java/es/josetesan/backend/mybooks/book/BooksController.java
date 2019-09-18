@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -36,8 +37,13 @@ public class BooksController {
     }
 
     @GetMapping("/book/{id}")
-    public Mono<Book> getBook(@PathVariable UUID id) {
+    public Mono<Book> getBook(@PathVariable("id") UUID id) {
         return bookRepository.findById(id);
+    }
+
+    @GetMapping("/book")
+    public Flux<Book> getBookByTitleAprox(@RequestParam("title") String title) {
+        return bookRepository.findBookByTitleContains(title);
     }
 }
 
