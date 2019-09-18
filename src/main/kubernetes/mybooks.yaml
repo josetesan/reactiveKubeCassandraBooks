@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: mybooks
+spec:
+  selector:
+    matchLabels:
+      app: mybooks
+  replicas: 2 # tells deployment to run 3 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: mybooks
+    spec:
+      containers:
+        - name: mybooks
+          image: muallin/mybooks:0.0.7
+          resources:
+            limits:
+              memory: 768Mi
+              cpu: "0.25"
+          ports:
+            - containerPort: 8082
+              name: server

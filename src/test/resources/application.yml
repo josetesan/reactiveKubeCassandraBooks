@@ -1,0 +1,7 @@
+server:
+    port: 8082
+spring:
+    data:
+        cassandra:
+            keyspace-name: mykeyspace
+            schema-action: CREATE_IF_NOT_EXISTS
