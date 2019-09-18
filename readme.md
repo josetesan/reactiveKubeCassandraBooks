@@ -44,4 +44,4 @@ http $URL/books/<id>
 6. [Spring cassandra](https://www.baeldung.com/spring-data-cassandra-tutorial)
 7. [Spring data cassandra](https://docs.spring.io/spring-data/cassandra/docs/2.2.0.RC3/reference/html/)
 8. [Cassandra CSQL Syntax](https://docs.datastax.com/en/archived/cql/3.3/cql/cql_reference/cqlCreateKeyspace.html)
-    
+9. [Como cambiar de container-runtime en minikube](https://cloudnative.mx/como-cambiar-de-container-runtime/)    
