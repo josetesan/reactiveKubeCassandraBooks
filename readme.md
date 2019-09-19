@@ -47,3 +47,8 @@ http $URL/books/<id>
 9. [Como cambiar de container-runtime en minikube](https://cloudnative.mx/como-cambiar-de-container-runtime/)    
 10. [Minikube a fondo](https://kubernetes.io/docs/setup/learning-environment/minikube/)
 11. [Prometheus and Spring (unrelated )](https://docs.spring.io/spring-metrics/docs/current/public/prometheus)
+12. [Grafana and prometheus on kubernetes](https://medium.com/@_oleksii_/how-to-deploy-grafana-prometheus-in-kubernetes-cluster-219d23e4574f)
+
+### TODO
+1. Remove custom grafana image
+

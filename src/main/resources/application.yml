@@ -1,21 +1,32 @@
 server:
     port: 8082
 
+management:
+    endpoint:
+        prometheus:
+            enabled: true
+    metrics:
+        export:
+            prometheus:
+                enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: "*"
 ---
 spring:
-    profiles:
-        active: local
+    profiles: local
     data:
         cassandra:
             keyspace-name: mykeyspace
             schema-action: CREATE_IF_NOT_EXISTS
             contact-points: localhost
 
+
 ---
 
 spring:
-    profiles:
-        active: kubernetes
+    profiles: kubernetes
     data:
         cassandra:
             contact-points: cassandra.default.svc.cluster.local
