@@ -9,4 +9,4 @@ spec:
       name: http
   selector:
     app: mybooks
-  type: NodePort
+  type: LoadBalancer

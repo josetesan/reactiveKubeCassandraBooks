@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1 # for versions before 1.8.0 use apps/v1beta1
+apiVersion: apps/v1 # for versions before 1.8.0 use apps/v1beta1
 kind: Deployment
 metadata:
   name: mybooks
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: mybooks
-          image: muallin/mybooks:0.0.7
+          image: muallin/mybooks:0.0.8
           resources:
             limits:
               memory: 768Mi

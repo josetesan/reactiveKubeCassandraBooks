@@ -1,7 +1,23 @@
-server:
-    port: 8082
+---
 spring:
+    profiles:
+        active: local
     data:
         cassandra:
             keyspace-name: mykeyspace
             schema-action: CREATE_IF_NOT_EXISTS
+            contact-points: localhost
+server:
+    port: 8082
+
+---
+
+spring:
+    profiles:
+        active: kubernetes
+    data:
+        cassandra:
+            keyspace-name: mykeyspace
+            schema-action: CREATE_IF_NOT_EXISTS
+            contact-points:
+

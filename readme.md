@@ -46,3 +46,4 @@ http $URL/books/<id>
 8. [Cassandra CSQL Syntax](https://docs.datastax.com/en/archived/cql/3.3/cql/cql_reference/cqlCreateKeyspace.html)
 9. [Como cambiar de container-runtime en minikube](https://cloudnative.mx/como-cambiar-de-container-runtime/)    
 10. [Minikube a fondo](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+11. [Prometheus and Spring (unrelated )](https://docs.spring.io/spring-metrics/docs/current/public/prometheus)
